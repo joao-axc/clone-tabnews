@@ -10,8 +10,16 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --passWithNoTests --watch"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joao-axc/clone-tabnews.git"
+  },
+  "author": "Joao Cardoso",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joao-axc/clone-tabnews/issues"
+  },
+  "homepage": "https://github.com/joao-axc/clone-tabnews#readme",
   "dependencies": {
     "next": "13.1.6",
     "react": "18.2.0",
