@@ -10,6 +10,7 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --passWithNoTests --watch"
   },
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joao-axc/clone-tabnews.git"
