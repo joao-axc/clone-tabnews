@@ -7,14 +7,7 @@ async function query(queryObject) {
     host: process.env.POSTGRES_HOST,
     port: process.env.POSTGRES_PORT,
     database: process.env.POSTGRES_DB,
-  });
-
-  console.log("Credenciais do Postgres:", {
-    user: process.env.POSTGRES_USER,
-    password: process.env.POSTGRES_PASSWORD,
-    host: process.env.POSTGRES_HOST,
-    port: process.env.POSTGRES_PORT,
-    database: process.env.POSTGRES_DB,
+    ssl: getSSLValues(),
   });
 
   try {
@@ -27,6 +20,10 @@ async function query(queryObject) {
   } finally {
     client.end();
   }
+}
+
+function getSSLValues() {
+  return process.env.NODE_ENV === "production" ? true : false;
 }
 
 export default {
